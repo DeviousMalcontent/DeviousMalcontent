@@ -28,7 +28,8 @@ query {
 }
 """
 
-API_URL = "https://" + "://github.com"
+HOST_API = ".".join(["api", "github", "com"])
+API_URL = f"https://{HOST_API}/graphql"
 
 response = requests.post(
     API_URL,
@@ -43,13 +44,14 @@ if "errors" in data:
 
 lists = data["data"]["viewer"]["lists"]["nodes"]
 username = os.environ["GITHUB_REPOSITORY_OWNER"]
+HOST_WEB = ".".join(["github", "com"])
 
 sections = []
 for lst in lists:
     items = [item for item in lst["items"]["nodes"] if item]
     if not items:
         continue
-    list_url = f"https://github.com{username}/lists/{lst['slug']}"
+    list_url = f"https://{HOST_WEB}/stars/{username}/lists/{lst['slug']}"
     block = [f"### [{lst['name']}]({list_url})"]
     if lst.get("description"):
         block.append(f"*{lst['description']}*\n")
@@ -64,7 +66,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     readme = f.read()
 
 pattern = r"(<!-- COLLECTIONS:START -->).*?(<!-- COLLECTIONS:END -->)"
-replacement = f"\\1\n{new_content}\n\\2"
+replacement = rf"\1\n{new_content}\n\2"
 updated_readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
 
 with open("README.md", "w", encoding="utf-8") as f:
