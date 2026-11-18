@@ -29,7 +29,7 @@ query {
 """
 
 response = requests.post(
-    "https://github.com",
+    "https://api.github.com",
     json={"query": QUERY},
     headers=HEADERS,
 )
