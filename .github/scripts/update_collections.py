@@ -56,7 +56,7 @@ for lst in lists:
     if lst.get("description"):
         block.append(f"*{lst['description']}*\n")
     for repo in items:
-        desc = f" — {repo['description']}" if repo.get("description") else ""
+        desc = f" - {repo['description']}" if repo.get("description") else ""
         block.append(f"- [{repo['nameWithOwner']}]({repo['url']}){desc}")
     sections.append("\n".join(block))
 
