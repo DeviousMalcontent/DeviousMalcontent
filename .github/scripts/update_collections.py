@@ -28,13 +28,18 @@ query {
 }
 """
 
+API_URL = "https://" + "://github.com"
+
 response = requests.post(
-    "https://api.github.com",
+    API_URL,
     json={"query": QUERY},
     headers=HEADERS,
 )
 response.raise_for_status()
 data = response.json()
+
+if "errors" in data:
+    raise RuntimeError(f"GraphQL API Error: {data['errors']}")
 
 lists = data["data"]["viewer"]["lists"]["nodes"]
 username = os.environ["GITHUB_REPOSITORY_OWNER"]
