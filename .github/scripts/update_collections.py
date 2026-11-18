@@ -66,8 +66,12 @@ with open("README.md", "r", encoding="utf-8") as f:
     readme = f.read()
 
 pattern = r"(<!-- COLLECTIONS:START -->).*?(<!-- COLLECTIONS:END -->)"
-replacement = rf"\1\n{new_content}\n\2"
-updated_readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
+updated_readme = re.sub(
+    pattern,
+    lambda m: f"{m.group(1)}\n{new_content}\n{m.group(2)}",
+    readme,
+    flags=re.DOTALL,
+)
 
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(updated_readme)
