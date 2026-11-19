@@ -6,13 +6,13 @@ Eventually, I plan to update this section with meaningful text.
 
 <!-- COLLECTIONS:START -->
 ### [Irrlicht Project](https://github.com/stars/DeviousMalcontent/lists/irrlicht-project)
-- [DeviousMalcontent/Irrlicht-vkdx11](https://github.com/DeviousMalcontent/Irrlicht-vkdx11) - Render preview
+- [DeviousMalcontent/Irrlicht-vkdx11](https://github.com/DeviousMalcontent/Irrlicht-vkdx11) - Vulkan and DirectX11 Render preview for Irrlicht
 - [DeviousMalcontent/IrrlichtDemos](https://github.com/DeviousMalcontent/IrrlichtDemos) - Irrlicht Demo Repository
 
 ### [FtoC Project](https://github.com/stars/DeviousMalcontent/lists/ftoc-project)
 *A simple program that converts a temperature from Celsius or Fahrenheit (vice versa), a great way to learn a new programming language...*
 
-- [DeviousMalcontent/FtoC_AsmWin32API](https://github.com/DeviousMalcontent/FtoC_AsmWin32API) - Following on from the "Portfolio work" I did a few years back this is a simple program that converts a temperature to Celsius or Fahrenheit, written in Microsoft Assembler and uses the Win32 API. - it's a good way to learn a new programming language...
+- [DeviousMalcontent/FtoC_AsmWin32API](https://github.com/DeviousMalcontent/FtoC_AsmWin32API) - Simple MASM\Win32 API Program: Converts a temperature to Celsius or Fahrenheit
 - [DeviousMalcontent/FtoC_CppWin32API](https://github.com/DeviousMalcontent/FtoC_CppWin32API) - Simple C++\Win32 API Program: Converts a temperature to Celsius or Fahrenheit
 - [DeviousMalcontent/FtoC_CSharp](https://github.com/DeviousMalcontent/FtoC_CSharp) - Simple C Sharp Program: Converts a temperature to Celsius or Fahrenheit
 - [DeviousMalcontent/FtoC_Java](https://github.com/DeviousMalcontent/FtoC_Java) - Simple Java Program: Converts a temperature to Celsius or Fahrenheit
